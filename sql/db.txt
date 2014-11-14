@@ -1,0 +1,61 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Aug 20, 2014 at 09:48 PM
+-- Server version: 5.1.37
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `mducorp`
+--
+CREATE DATABASE `mducorp` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `mducorp`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `item`
+--
+
+CREATE TABLE IF NOT EXISTS `item` (
+  `sno` int(11) NOT NULL AUTO_INCREMENT,
+  `ssno` int(11) DEFAULT NULL,
+  `description` varchar(40) DEFAULT NULL,
+  `unit` double DEFAULT NULL,
+  `rate` double DEFAULT NULL,
+  PRIMARY KEY (`sno`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `item`
+--
+
+INSERT INTO `item` (`sno`, `ssno`, `description`, `unit`, `rate`) VALUES
+(1, 1, 'testing', 2, 200),
+(2, 3, 'klk', 3, 3),
+(3, 5, 'testing', 22, 22.22),
+(4, 33, 'summa', 33, 33),
+(5, 55, '', 2, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE IF NOT EXISTS `login` (
+  `username` varchar(20) DEFAULT NULL,
+  `pwd` varchar(20) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`username`, `pwd`) VALUES
+('user', 'user'),
+('admin', 'admin');
